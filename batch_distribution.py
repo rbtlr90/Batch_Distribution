@@ -1,9 +1,16 @@
 # import heapq
+import argparse
 import random
 import time
 
-N = 1000
-M = 200
+parser = argparse.ArgumentParser(description="set of batches and servers")
+parser.add_argument('--N', type=int)
+parser.add_argument('--M', type=int)
+
+args = parser.parse_args()
+
+N = args.N
+M = args.M
 
 class Node:
     def __init__(self, key, value):
